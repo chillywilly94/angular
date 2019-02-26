@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Zadatak2</h1>
+      <ol>
+        <li>Dodaj button 'Prikazi'</li>
+        <li>Dodati paragraph sa proizvoljnim tekstom</li>
+        <li>Toggle prikaz paragrafa na klik button-a 'Prikazi'</li>
+        <li>Logovati sve klikove u niz i prikazati niz ispod prethodnog paragrafa</li>
+        <li>Pocevsi od 3-eg loga, svim buducim logovima dati crvenu pozadinu preko ngStyle i belu boju preko ngClass</li>
+      </ol>
+      <button class="btn btn-warning" (click)="toggle()">Prikazi</button>
+      <p *ngIf="par">Proizvoljni tekst ovog paragrafa</p>
+      <!-- <app-ngp *ngFor="let tNiz of toggleNiz" ></app-ngp> -->
+      <p *ngFor="let tNiz of toggleNiz" [ngClass]="{'veci': tNiz>=3}">Ovo je klik {{tNiz}}</p>
+    </div>
+  </div>
+</div>

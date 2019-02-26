@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Zadatak1</h1>
+      <ol>
+        <li>Napraviti input field koji radi update property-a username preko Two-Way Databinding-a</li>
+        <li>Prikazi username property preko string interpolacije u p tagu</li>
+        <li>Dodaj button koji se moze kliknuti samo ako username nije prazan</li>
+        <li>Nakon klika button-a, username se treba resetovati na prazan string</li>
+      </ol>
+      <h3>Korisnicko ime:</h3>
+      <input type="text" class="form-control" [(ngModel)]="userName" (input)="inputName($event)">
+      <p>{{userName}}</p>
+
+      <button class="btn btn-danger" [disabled]="reset" (click)="resetUser()">Resetuj Korisnika</button>
+      <hr>
+    </div>
+  </div>
+</div>
